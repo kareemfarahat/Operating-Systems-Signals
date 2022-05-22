@@ -1,0 +1,2 @@
+# Operating-Systems-Signals
+A C program that behaves as follows: Parent Process: 1. Forks two children. 2. Loop forever. Child1 Process: 1. Prints its ID, its parent's ID. 2. Sleep for 5 seconds. 3. Reads a value from user. 4. Sends this value to the parent as exit code. Child2 Process: 1. Prints its ID, its parent's ID. 2. Suspends itself (stops itself). 3. Prints a message "child process is resumed". SIGCHLD Handler: 1. Receive exit code from child1. 2. If exit code=1, kill child2. 3. Else, Resume child2. 4. If received exit code from child2 terminate parent.
